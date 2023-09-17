@@ -2,80 +2,71 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     background-color: #333;
 }
 
 .slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    margin: 20px auto;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    text-align: center;
+    max-width: 50em;
+    padding: 2em;
+    background-color: #333;
 }
 
-/* Картинки */
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.text {
+    color:#fff;
+    font-size: 3em;
 }
 
-.slide {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+.slider-img .slide, .control, .text {
+    display: none;
 }
 
-.slide:active {
-    opacity: 1;
-}
-
-/* Текст и кнопки */
-.slider-part2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.slider-text {
-    color: white;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Кнопки */
-.slider-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.control {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #51cbd6;
-    margin: 0 5px;
+/* Стили для лейблов (ваша анимация и стили кнопок могут быть добавлены сюда) */
+.control-label {
     cursor: pointer;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #51cbd6;
     box-sizing: border-box;
-    appearance: none;
+    margin: 0 0.5em;
+    border-radius: 50%;
 }
 
-/* Активная кнопка */
-input[type="radio"].control:hover {
+.control-label:hover {
     background-color: #fff;
+    border: 0.3em solid #fff;
 }
 
-input[type="radio"].control:checked {
+.control-label:enabled {
     background-color: transparent;
-    border: 2px solid #51cbd6;
+    border: 0.3em solid #51cbd6;
+}
+.control-label:active {
+    background-color: transparent;
+    border: 0.3em solid #fff;
 }
 
-input[type="radio"].control:hover,
-input[type="radio"].control:checked:hover {
-    border-color: #fff;
+#slide1:checked ~ .slider-img .slide.slide1,
+#slide2:checked ~ .slider-img .slide.slide2,
+#slide3:checked ~ .slider-img .slide.slide3,
+#slide4:checked ~ .slider-img .slide.slide4 {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#slide1:checked ~ .slider-text #text1,
+#slide2:checked ~ .slider-text #text2,
+#slide3:checked ~ .slider-text #text3,
+#slide4:checked ~ .slider-text #text4 {
+    display: block;
 }

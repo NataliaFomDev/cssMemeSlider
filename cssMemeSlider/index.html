@@ -8,26 +8,30 @@
 </head>
 <body>
     <div class="slider-container">
-        <div class="slider">
-            <img class="slide" src="/Users/natalyafominykh/Desktop/CSSMEMS/cssMemeSlider/cssMemeSlider/images/MEM01.jpeg" alt="Mem 1">
-            <img class="slide" src="/Users/natalyafominykh/Desktop/CSSMEMS/cssMemeSlider/cssMemeSlider/images/MEM02.jpeg" alt="Mem 2">
-            <img class="slide" src="/Users/natalyafominykh/Desktop/CSSMEMS/cssMemeSlider/cssMemeSlider/images/MEM03.jpeg" alt="Mem 3">
-            <img class="slide" src="/Users/natalyafominykh/Desktop/CSSMEMS/cssMemeSlider/cssMemeSlider/images/MEM04.jpeg" alt="Mem 4">
+        <input class="control" id="slide1" type="radio" name="slider" checked>
+        <input class="control" id="slide2" type="radio" name="slider">
+        <input class="control" id="slide3" type="radio" name="slider">
+        <input class="control" id="slide4" type="radio" name="slider">
+
+        <div class="slider-img">
+            <img class="slide slide1" src="/Users/natalyafominykh/Desktop/CSSMEMS/cssMemeSlider/cssMemeSlider/images/MEM01.jpeg" alt="Mem 1">
+            <img class="slide slide2" src="/Users/natalyafominykh/Desktop/CSSMEMS/cssMemeSlider/cssMemeSlider/images/MEM02.jpeg" alt="Mem 2">
+            <img class="slide slide3" src="/Users/natalyafominykh/Desktop/CSSMEMS/cssMemeSlider/cssMemeSlider/images/MEM03.jpeg" alt="Mem 3">
+            <img class="slide slide4" src="/Users/natalyafominykh/Desktop/CSSMEMS/cssMemeSlider/cssMemeSlider/images/MEM04.jpeg" alt="Mem 4">
         </div>
-        <div class="slider-part2">
-            <div class="slider-text">
-                <p>Хочу сказать спасибо гравитации, если бы не она, я бы тут сейчас не стоял</p>
-                <p>В смысле javascript это не java?</p>
-                <p>Когда экран загрузки становится черным и ты видишь себя</p>
-                <p>Нельзя так просто взять и выпрямить спину</p>
-            </div>
-            <div class="slider-controls">
-                <input type="radio" class="control" name="slider" checked>
-                <input type="radio" class="control" name="slider">
-                <input type="radio" class="control" name="slider">
-                <input type="radio" class="control" name="slider">
-            </div>
+        <div class="slider-lbl">
+            <label class="control-label" for="slide1"></label>
+            <label class="control-label" for="slide2"></label>
+            <label class="control-label" for="slide3"></label>
+            <label class="control-label" for="slide4"></label>
         </div>
+        <div class="slider-text">
+            <span class="text" id="text1">Хочу сказать спасибо гравитации, если бы не она, я бы тут сейчас не стоял</span>
+            <span class="text" id="text2">В смысле javascript это не java?</span>
+            <span class="text" id="text3">Когда экран загрузки становится черным и ты видишь себя</span>
+            <span class="text" id="text4">Нельзя так просто взять и выпрямить спину</span>
+        </div>       
     </div>
 </body>
 </html>
+
